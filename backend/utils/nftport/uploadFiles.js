@@ -32,8 +32,8 @@ async function main() {
           const fileStream = fs.createReadStream(`${basePath}/build/images/${file}`);
           formData.append("file", fileStream);
           const options = {
-            method: "POST",
-            headers: {},
+            method: "POST",  
+            headers: {"Authorization": process.env.NFTPORT_API_KEY },
             body: formData,
           };
           const response = await fetchWithRetry(url, options);
