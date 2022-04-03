@@ -1,5 +1,6 @@
 const basePath = process.cwd();
 const { NETWORK } = require(`${basePath}/constants/network.js`);
+const { triggerAsyncId } = require("async_hooks");
 const fs = require("fs");
 const sha1 = require(`${basePath}/node_modules/sha1`);
 const { createCanvas, loadImage } = require(`${basePath}/node_modules/canvas`);
@@ -170,10 +171,13 @@ const addMetadata = (_dna, _edition) => {
 
 const addAttributes = (_element) => {
   let selectedElement = _element.layer.selectedElement;
+  if(selectedElement.name.trim().toLowerCase()!=="none")
+  {
   attributesList.push({
     trait_type: _element.layer.name,
     value: selectedElement.name,
   });
+}
 };
 
 const loadLayerImg = async (_layer) => {
