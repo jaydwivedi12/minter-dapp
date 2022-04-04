@@ -1,3 +1,5 @@
+/* Do not use this files error-used pinata
+
 const FormData = require("form-data");
 const path = require("path");
 const basePath = process.cwd();
@@ -62,3 +64,4 @@ async function main() {
 }
 
 main();
+*/

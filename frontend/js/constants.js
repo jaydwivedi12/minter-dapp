@@ -1,9 +1,9 @@
-const contractAddress = "0xb7C94BB74B61f56a98d6e3C7D9b5128A7C775928"; //Replace with your own contract address
-const chain = 'rinkeby'; // rinkeby or polygon
+const contractAddress = "0xf1a5c0A6aF1658588e769f1C95Ab79a6E572F335"; //Replace with your own contract address
+const chain = 'polygon'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the Chubby BUddy NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'The Chubby BUddy NFT Project is a decentralized, collection of NFTs - unique digital collectibles, living on the Polygon Blockchain. 5,000 buddies have been programmatically generated from different of combinations, each with unique characteristics and different traits.';
+const welcome_p = 'The Chubby Buddy NFT Project is a decentralized, collection of NFTs - unique digital collectibles, living on the Polygon Blockchain. 5,000 buddies have been programmatically generated from different of combinations, each with unique characteristics and different traits.';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
