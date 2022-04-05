@@ -3,7 +3,7 @@ const chain = 'polygon'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the Chubby Buddy NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'The Chubby Buddy NFT Project is a decentralized, collection of NFTs - unique digital collectibles, living on the Polygon Blockchain. 5,000 buddies have been programmatically generated from different of combinations, each with unique characteristics and different traits.Get a Chubby Buddy for Youself';
+const welcome_p = 'The Chubby Buddy NFT Project is a decentralized, collection of NFTs - unique digital collectibles, living on the Polygon Blockchain. 5,000 buddies have been programmatically generated from different of combinations, each with unique characteristics and different traits.Get a Chubby Buddy for Yourself';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
