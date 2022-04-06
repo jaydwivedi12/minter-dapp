@@ -10,6 +10,13 @@ window.addEventListener("DOMContentLoaded", async () => {
   welcomeH2.innerText = welcome_h2;
   welcomeP.innerHTML = welcome_p;
 
+  const connectWalletActionBtn = document.getElementById(
+    "connectWalletActionBtn"
+  );
+  connectWalletActionBtn.onclick = () => {
+    document.getElementById("connectWallet").click();
+  };
+
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     checkChain();
@@ -33,9 +40,24 @@ window.addEventListener("DOMContentLoaded", async () => {
     direction: 'ttb',
     height: "calc(100vh - 90px)",
     width: '30vw',
-    autoHeight: true,
+   // autoHeight: true,
   });
   splide.mount();
+/*
+  const splideTwo = new Splide(".splide-2", {
+    type: "loop",
+    arrows: false,
+    perMove: 3,
+    pagination: false,
+    autoplay: true,
+    perPage: 5,
+    breakpoints: {
+      768: {
+        perPage: 3,
+      },
+    },
+  });
+  splideTwo.mount();*/
 
   updateConnectStatus();
   if (MetaMaskOnboarding.isMetaMaskInstalled()) {
@@ -53,14 +75,14 @@ const updateConnectStatus = async () => {
   const spinner = document.getElementById("spinner");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
     onboardButton.innerText = "Install MetaMask!";
-    onboardButton.onclick = () => {
-      onboardButton.innerText = "Connecting...";
-      onboardButton.disabled = true;
-      onboarding.startOnboarding();
-      // HIDE SPINNER
+     // HIDE SPINNER
       spinner.classList.add('hidden');
       notConnected.classList.remove('hidden');
       notConnected.classList.add('show-not-connected');
+      onboardButton.onclick = () => {
+        onboardButton.innerText = "Connecting...";
+        onboardButton.disabled = true;
+        onboarding.startOnboarding();
     };
   } else if (accounts && accounts.length > 0) {
     onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
@@ -313,17 +335,22 @@ async function mint() {
     try {
       const mintTransaction = await contract.methods
         .mint(amount)
-        .send({ from: window.address, value: value.toString() });
-      if(mintTransaction) {
-        if(chain === 'rinkeby') {
-          const url = `https://rinkeby.etherscan.io/tx/${mintTransaction.transactionHash}`;
+        .send({ from: window.address, value: value.toString(),maxPriorityFeePerGas: null,
+          maxFeePerGas: null, });
+          if (mintTransaction) {
+            let url = "";
+            if (chain === "rinkeby") {
+              url = `https://rinkeby.etherscan.io/tx/${mintTransaction.transactionHash}`;
+            } else if (chain === "polygon") {
+              url = `https://polygonscan.com/tx/${mintTransaction.transactionHash}`;
+            }
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
           mintedTxnBtn.href = url;
           countdownContainer.classList.add('hidden');
           mintedContainer.classList.remove('hidden');
-        }
+        
         console.log("Minuted successfully!", `Transaction Hash: ${mintTransaction.transactionHash}`);
       } else {
         const mainText = document.getElementById("mainText");
