@@ -9,7 +9,7 @@
   --font-secondary: "Arvo", serif;
   --font-code: "Roboto", monospace;
   --bg-color: #c6f1fc;
-  --bg-color-transparent: #0baef39b;
+  --bg-color-transparent: #b4e8fec4;
   --font-color: #000000;
   --btn-bg-color: #000000;
   --accent-color: #4dd3fc;
@@ -85,8 +85,8 @@ header .container {
   height: 100%;
   text-align: center;
   margin: 0 auto 0 35vw;
-  opacity: 0;
-  transform: translateY(10vh);
+ /* opacity: 0;
+  transform: translateY(10vh);*/
   transition: all 0.5s ease-in-out;
 }
 
