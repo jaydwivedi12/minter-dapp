@@ -11,7 +11,7 @@
   --bg-color: #abebff;
   --bg-color-transparent: #0c86ba9b;
   --font-color: #000000;
-  --btn-bg-color: #7943e6;
+  --btn-bg-color: #9e6eff;
   --accent-color: #4dd3fc;
   --header-shadow: var(--accent-color) 0px 0px 5px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
@@ -57,7 +57,7 @@ h1 {
 /* HEADER */
 
 header {
-  background-color: #008cff;;
+  background-color: #00b7ff;;
   box-shadow: var(--header-shadow);
 }
 
