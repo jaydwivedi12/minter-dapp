@@ -8,7 +8,7 @@
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Arvo", serif;
   --font-code: "Roboto", monospace;
-  --bg-color: #a0e3f8;
+  --bg-color: #abebff;
   --bg-color-transparent: #0c86ba9b;
   --font-color: #000000;
   --btn-bg-color: #7943e6;
@@ -57,7 +57,7 @@ h1 {
 /* HEADER */
 
 header {
-  background-color: var(--bg-color);
+  background-color: #008cff;;
   box-shadow: var(--header-shadow);
 }
 
