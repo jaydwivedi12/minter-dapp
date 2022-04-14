@@ -9,7 +9,7 @@
   --font-secondary: "Arvo", serif;
   --font-code: "Roboto", monospace;
   --bg-color: #000000;
-  --bg-color-transparent: #3b3737c4;
+  --bg-color-transparent: #00000091;
   --font-color: #ff0000;
   --btn-bg-color: #fbff18;
   --accent-color: #e3c52dfe;
@@ -616,7 +616,7 @@ section {
 /* TEAM */
 
 .team {
-  background: var(--accent-color);
+  background: var(--btn-bg-colorr);
   text-align: center;
   padding: 3rem 0;
 }
