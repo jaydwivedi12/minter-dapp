@@ -616,7 +616,7 @@ section {
 /* TEAM */
 
 .team {
-  background: var(--btn-bg-colorr);
+  background: var(--btn-bg-color);
   text-align: center;
   padding: 3rem 0;
 }
